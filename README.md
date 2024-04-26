@@ -1,6 +1,8 @@
-# Using the Python SharePointClient to Access and Manage SharePoint Data
+# Using the Python SharePointClient to Access and Download SharePoint Files and Folders
 
-In the modern workplace, integrating Microsoft SharePoint with Python applications enables automated management and access to documents, folders, and other resources programmatically. This tutorial outlines the use of the `SharePointClient` class to interact with SharePoint through the Microsoft Graph API. The tutorial will guide you through application registration in Azure, implementing the Python class, and setting necessary permissions. Finally, the complete source code will be shared on GitHub.
+In the modern workplace, integrating Microsoft SharePoint with Python applications enables automated management and access to documents, folders, and other resources programmatically. This tutorial outlines the creation and the use of the `SharePointClient` class to interact with SharePoint through the Microsoft Graph API. 
+
+The tutorial will guide you through application registration in Azure, implementing the Python class, and setting necessary permissions. Finally, the complete source code will be shared on GitHub.
 
 ## Prerequisites
 
