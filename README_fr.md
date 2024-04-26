@@ -1,42 +1,42 @@
-# Using the Python SharePointClient to Access and Download SharePoint Files and Folders
+# Utilisation du SharePointClient Python pour accéder et télécharger des fichiers et dossiers SharePoint
 
-In the modern workplace, integrating Microsoft SharePoint with Python applications enables automated management and access to documents, folders, and other resources programmatically. This tutorial outlines the creation and the use of the `SharePointClient` class to interact with SharePoint through the Microsoft Graph API. 
+Dans le monde professionnel moderne, l'intégration de Microsoft SharePoint avec des applications Python permet une gestion automatisée des documents, des dossiers et d'autres ressources de manière programmatique. Ce tutoriel décrit la création et l'utilisation de la classe `SharePointClient` pour interagir avec SharePoint via l'API Microsoft Graph.
 
-The tutorial will guide you through application registration in Azure, implementing the Python class, and setting necessary permissions. Finally, the complete source code will be shared on GitHub.
+Le tutoriel vous guidera à travers l'enregistrement de votre application dans Azure, l'implémentation de la classe Python et la configuration des permissions nécessaires. Enfin, le code source complet sera partagé sur GitHub.
 
-## Prerequisites
+## Prérequis
 
-Before we begin, make sure you have:
+Avant de commencer, assurez-vous de disposer de :
 
-- Python installed on your machine.
-- Access to a Microsoft SharePoint site.
-- Installed the `requests` library in Python, available via pip (`pip install requests`).
+- Python installé sur votre machine.
+- Un accès à un site Microsoft SharePoint.
+- La bibliothèque `requests` installée dans Python, disponible via pip (`pip install requests`).
 
-## Step 1: Register Your Application
+## Étape 1 : Enregistrez votre application
 
-To interact with SharePoint via the Microsoft Graph API, you need to register your application in Azure Active Directory (Azure AD). This provides the necessary `tenant_id`, `client_id`, and `client_secret`.
+Pour interagir avec SharePoint via l'API Microsoft Graph, vous devez enregistrer votre application dans Azure Active Directory (Azure AD). Cela fournit les `tenant_id`, `client_id` et `client_secret` nécessaires.
 
-### How to Register:
+### Comment s'enregistrer :
 
-1. **Sign into the Azure Portal:** Navigate to [Azure Portal](https://portal.azure.com) and log in.
-2. **Access Azure Active Directory:** Select Azure Active Directory from the sidebar.
-3. **Register a new application:** Go to "App registrations" and click "New registration". Provide a name, choose the account types, and set a redirect URI if needed.
-4. **Obtain IDs and Secrets:** Post-registration, note the provided Client ID and Tenant ID. Create a new client secret under "Certificates & secrets".
+1. **Connectez-vous au portail Azure :** Accédez au [portail Azure](https://portal.azure.com) et connectez-vous.
+2. **Accédez à Azure Active Directory :** Sélectionnez Azure Active Directory dans la barre latérale.
+3. **Enregistrez une nouvelle application :** Allez dans "Inscriptions d'applications" et cliquez sur "Nouvelle inscription". Fournissez un nom, choisissez les types de comptes et définissez une URI de redirection si nécessaire.
+4. **Obtenez les ID et secrets :** Après l'enregistrement, notez l'ID client et l'ID locataire fournis. Créez un nouveau secret client dans "Certificats et secrets".
 
-## Step 2: Configure Permissions
+## Étape 2 : Configurer les permissions
 
-Set the correct permissions in Azure AD to allow your application to read files and sites.
+Définissez les permissions correctes dans Azure AD pour permettre à votre application de lire les fichiers et les sites.
 
-### Setting Permissions:
+### Configuration des permissions :
 
-1. **API permissions:** On your app's registration page, click "API permissions".
-2. **Add permissions:** Select "Add a permission", choose "Microsoft Graph" then "Application permissions".
-3. **Add specific permissions:** Find and add `Files.Read.All` and `Sites.Read.All` to enable file and site reading capabilities.
-4. **Grant admin consent:** To activate the permissions, click "Grant admin consent for [Your Organization]".
+1. **Permissions de l'API :** Sur la page d'inscription de votre application, cliquez sur "Permissions de l'API".
+2. **Ajoutez des permissions :** Sélectionnez "Ajouter une permission", choisissez "Microsoft Graph" puis "Permissions de l'application".
+3. **Ajoutez des permissions spécifiques :** Trouvez et ajoutez `Files.Read.All` et `Sites.Read.All` pour activer les capacités de lecture de fichiers et de sites.
+4. **Accordez le consentement de l'administrateur :** Pour activer les permissions, cliquez sur "Accorder le consentement administratif pour [Votre Organisation]".
 
-## Step 3: Setting Up the SharePointClient Class
+## Étape 3 : Configuration de la classe SharePointClient
 
-Implement the `SharePointClient` class which includes authentication and methods to interact with SharePoint data. Below is the class integrated into a script:
+Implémentez la classe `SharePointClient` qui inclut l'authentification et les méthodes pour interagir avec les données SharePoint. Ci-dessous, la classe est intégrée dans un script :
 
 ```python
 import requests
@@ -162,6 +162,6 @@ class SharePointClient:
 
 ## Conclusion
 
-The `SharePointClient` class provides a streamlined way to interact with SharePoint resources through Python. This solution is ideal for automating document management tasks, enhancing productivity across your organization. Check out the full source code on [GitHub](https://github.com/ericvaillancourt/Sharepoint-File-Download).
+La classe `SharePointClient` offre un moyen simplifié d'interagir avec les ressources SharePoint via Python. Cette solution est idéale pour automatiser les tâches de gestion des documents, améliorant ainsi la productivité au sein de votre organisation. Consultez le code source complet sur [GitHub](https://github.com/ericvaillancourt/Sharepoint-File-Download).
 
-Keep your credentials secure and adhere to best practices for managing sensitive information. Enjoy automating with Python and SharePoint!
+Gardez vos identifiants en sécurité et respectez les meilleures pratiques pour la gestion des informations sensibles. Profitez de l'automatisation avec Python et SharePoint!
