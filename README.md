@@ -160,6 +160,6 @@ class SharePointClient:
 
 ## Conclusion
 
-The `SharePointClient` class provides a streamlined way to interact with SharePoint resources through Python. This solution is ideal for automating document management tasks, enhancing productivity across your organization. Check out the full source code on [GitHub](https://github.com/yourgithubrepo/sharepoint-client).
+The `SharePointClient` class provides a streamlined way to interact with SharePoint resources through Python. This solution is ideal for automating document management tasks, enhancing productivity across your organization. Check out the full source code on [GitHub](https://github.com/ericvaillancourt/Sharepoint-File-Download).
 
 Keep your credentials secure and adhere to best practices for managing sensitive information. Enjoy automating with Python and SharePoint!
