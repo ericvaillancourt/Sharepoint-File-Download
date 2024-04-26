@@ -103,7 +103,7 @@ class SharePointClient:
 tenant_id = 'your-tenant-id'
 client_id = 'your-client-id'
 client_secret = 'your-client-secret'
-site_url = "your-site-url"
+site_url = "xxxxx.sharepoint.com:/sites/xxxxxx"  # Replace xxxxx with your site URL
 resource = 'https://graph.microsoft.com/'
 
 client = SharePointClient(tenant_id, client_id, client_secret, resource)
